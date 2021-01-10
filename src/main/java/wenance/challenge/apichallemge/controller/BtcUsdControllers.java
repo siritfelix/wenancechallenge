@@ -47,4 +47,5 @@ public class BtcUsdControllers {
         return Mono
                 .just(ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(btcUsdPriceService.findAll()));
     }
+
 }
