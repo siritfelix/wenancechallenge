@@ -21,11 +21,7 @@ public class ScheduleBtc {
     @Scheduled(cron = "0/10 * * 1/1 * *")
     public void runTask() {
         log.info("Consulting price ....", LocalDateTime.now());
-        try {
-            clientService.getPrice();
-        } catch (Exception e) {
-            log.error("Error .......", e.getMessage());
-        }
+        clientService.getPrice();
 
     }
 }
